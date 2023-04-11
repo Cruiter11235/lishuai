@@ -1,6 +1,6 @@
 <template>
   <div>
-    <canvas id="myCanvas" width="400" height="600"></canvas>
+    <canvas id="myCanvas" width="300px" height="920px"></canvas>
     <div id="out" style="float: right"></div>
   </div>
 </template>
@@ -139,11 +139,8 @@ export default {
         var distance = Math.sqrt(dx * dx + dy * dy);
 
         if (distance < circle.radius) {
+          console.log(`我选择了${circle.sense}`)
           // 如果鼠标在圆内，则修改鼠标样式为手型，并放大该圆
-          document.getElementById(
-            "out"
-          ).innerHTML = `<h1>我选择了${circle.sense}</h1>`;
-          return;
         }
       }
     });
@@ -190,7 +187,8 @@ export default {
 </script>
 
 <style>
-canvas {
+#myCanvas {
+  background: linear-gradient(#7584AA,#8E9CBD);
   border: 1px solid white;
   cursor: default;
   /* 设置默认鼠标样式为箭头 */

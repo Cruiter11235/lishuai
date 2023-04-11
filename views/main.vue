@@ -166,6 +166,7 @@ export default {
         .then((data) => {
           console.log("attitude_pie:",JSON.parse(JSON.stringify(data)))
           this.chartPieData=JSON.parse(JSON.stringify(data));
+          console.log('chartPieData',this.chartPieData);
           this.ShowPage_pie = true;
         })
         .catch((error) => {
